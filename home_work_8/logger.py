@@ -78,7 +78,6 @@ def delete_data():
         if (len(new_data)-1) % 6 == 0:
             res = new_data.pop(len(new_data)-1)
             del(res)
-        print(new_data)  
         with open('data_first_variant.csv', 'w', encoding='utf-8') as file:
             file.writelines(new_data)
 
@@ -100,7 +99,6 @@ def delete_data():
                 new_data[i] = f'\n\n{i//5}'
         new_data.append('\n\n')
         new_data = ';'.join(new_data)
-        print(new_data)
         with open('data_second_variant.csv', 'w', encoding='utf-8') as file:
             file.write(new_data)
         
